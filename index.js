@@ -13,6 +13,11 @@ app.use(
   })
 );
 
+app.get("/", (req, res) => {
+  console.log("asdad");
+  res.json({ ok: "oke" });
+});
+
 app.post("/payment", async (req, res) => {
   const { token, amount } = req.body;
   try {
